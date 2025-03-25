@@ -7,7 +7,9 @@ function Header() {
 
     return (
         <div>
-            <img src={Logo} alt="Logo"/>
+            <header>
+                <img src={Logo} alt="Logo" />
+            </header>
                 <div>
                     <nav>
                         <a href="/">Homepage</a> 

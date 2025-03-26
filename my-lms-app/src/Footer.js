@@ -1,10 +1,10 @@
 import React from 'react';
 
-
+import './Footer.css'
 
 function Footer() {
     return (
-        <p class="footer">&copy; 2025 LMS. All rights reserved.</p>
+        <p className="footer">&copy; 2025 LMS. All rights reserved.</p>
     );
 }
 

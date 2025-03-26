@@ -1,22 +1,21 @@
 import React from 'react';
 import Logo from './images/logo.jpg';
 
-import './styles.css';
+import './Header.css';
 
 function Header() {
 
     return (
         <div>
-            <header>
+            <div className='header'>
                 <img src={Logo} alt="Logo" />
-            </header>
-                <div>
-                    <nav>
-                        <a href="/">Homepage</a> 
-                        <a href="/Courses">Courses</a> 
-                        <a href="/Login">Login</a>
-                    </nav>
-                </div>
+                <h1>LMS - Learning Management System</h1>
+            </div>
+                <nav>
+                    <a href="/">Homepage</a> 
+                    <a href="/Courses">Courses</a> 
+                    <a href="/Login">Login</a>
+                </nav>
         </div>
     );
 }

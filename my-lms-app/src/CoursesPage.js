@@ -17,8 +17,8 @@ function CoursesPage() {
     },[])
 
     useEffect(() => {
-        localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
-    }, [enrolledCourses]);
+        localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourse));
+    }, [enrolledCourse]);
 
     return (
         <div className="courses-page">

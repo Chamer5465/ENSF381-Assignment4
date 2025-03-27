@@ -1,6 +1,7 @@
 import React, { createContext } from 'react';
 import { useContext , useState, useEffect} from 'react';
 import AuthMessage from './AuthMessage';
+import './LoginForm.css';
 
 export const AuthContext = createContext();
 
@@ -67,13 +68,22 @@ function LoginForm() {
     return (
         <AuthContext.Provider value={{ message, setMessage, messageType, setMessageType }}>
             <div>
-                <form onSubmit={handleSubmit}>
-                    <label for='username'>Username:</label>
-                    <input type='text' id='username' value={username} onChange={(e) => setUsername(e.target.value)} ></input>
-                    <label for='password'>Password:</label>
-                    <input type='password' id='password' value={password} onChange={(e) => setPassword(e.target.value)} ></input>
-                    <button type='submit'>Submit</button>
-                    <a href=''>Forgot Password:</a>
+                <form onSubmit={handleSubmit} className='login'>
+                    <div className='username-container'>
+                        <label for='username'>Username:</label>
+                        <input type='text' id='username' value={username} onChange={(e) => setUsername(e.target.value)} ></input>
+                    </div>
+                    <div className='password-container'>
+                        <label for='password'>Password:</label>
+                        <input type='password' id='password' value={password} onChange={(e) => setPassword(e.target.value)} ></input>
+                    </div>
+                    <div className='login-button-container'>
+                        <button type='submit' className='login-button'>Submit</button>
+                    </div>
+                    <div className='forgot-password-container'>
+                        <br></br>
+                        <a href='' id='forgot-password'>Forgot Password:</a>
+                    </div>
                 </form>
                 <AuthMessage/>
             </div>

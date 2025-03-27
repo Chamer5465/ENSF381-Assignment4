@@ -8,9 +8,9 @@ import './CourseCatalog.css'
 function CourseCatalog() {
     const courseItem = Courses.map((course) => <CourseItem name={course.name} instructor={course.instructor} description={course.description}/>);
     return (
-        <div className="CourseCatalog">
+        <div>
             <h2>Course Catalog</h2>
-            <div>
+            <div className="CourseCatalog">
                 {courseItem}
             </div>
         </div>

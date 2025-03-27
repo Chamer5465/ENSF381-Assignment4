@@ -6,7 +6,9 @@ function EnrollmentList() {
     return(
         <div>
             <h2>Enrollment List</h2>
-
+            <div>
+                
+            </div>
         </div>
     );
 }

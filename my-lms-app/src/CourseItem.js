@@ -15,6 +15,10 @@ function CourseItem(props) {
         setShowDescription(false);
     }
 
+    function addClass(){
+        
+    }
+
     return (
         <div className="CourseItem" onMouseEnter={hover} onMouseLeave={outHover}>
             <img src={courselogo} alt='Course Image'></img>

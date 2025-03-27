@@ -1,11 +1,8 @@
 import React, { createContext } from 'react';
 import { useContext , useState, useEffect} from 'react';
 import AuthMessage from './AuthMessage';
-<<<<<<< HEAD
-import './LoginForm.css'
-=======
+
 import './LoginForm.css';
->>>>>>> 9f0c519147f987ce18e5c08480635ace8f02e929
 
 export const AuthContext = createContext();
 
@@ -71,16 +68,6 @@ function LoginForm() {
 
     return (
         <AuthContext.Provider value={{ message, setMessage, messageType, setMessageType }}>
-<<<<<<< HEAD
-            <div className="LoginForm">
-                <form onSubmit={handleSubmit}>
-                    <label for='username'>Username:</label>
-                    <input type='text' id='username' value={username} onChange={(e) => setUsername(e.target.value)} ></input>
-                    <label for='password'>Password:</label>
-                    <input type='password' id='password' value={password} onChange={(e) => setPassword(e.target.value)} ></input>
-                    <button type='submit'>Submit</button>
-                    <a href=''>Forgot Password</a>
-=======
             <div>
                 <form onSubmit={handleSubmit} className='login'>
                     <div className='username-container'>
@@ -98,7 +85,6 @@ function LoginForm() {
                         <br></br>
                         <a href='' id='forgot-password'>Forgot Password:</a>
                     </div>
->>>>>>> 9f0c519147f987ce18e5c08480635ace8f02e929
                 </form>
                 <AuthMessage/>
             </div>

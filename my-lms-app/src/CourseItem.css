@@ -1,0 +1,14 @@
+div.CourseItem {
+    text-align: center;
+    padding: 20px;
+    margin: 0 15px 10px 0;
+    background-color: #e6f2ff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+div.CourseItem img {
+    width: 35%;
+    height: 35%;
+    border-radius: 5px;
+}

@@ -15,3 +15,10 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+/*
+Name: Chase MacKenzie
+UCID: 30217013
+Name: Landon Reed
+UCID: 30142035
+*/

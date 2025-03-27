@@ -7,7 +7,7 @@ function EnrolledCourse(props) {
         <div>
             <img src={courselogo}></img>
             <p>Course Name: {props.name}</p>
-            <p>Credit Hours: {}</p>
+            <p>Credit Hours: {props.duration}</p>
             <button>Drop Course</button>
         </div>
     );

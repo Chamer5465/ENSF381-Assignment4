@@ -2,6 +2,8 @@ import {React, useState} from 'react';
 import courselogo from './images/course1.jpg';
 import Courses from './data/courses';
 
+import './CourseItem.css'
+
 function CourseItem(props) {
     const [showDescription, setShowDescription] = useState(false);
 
@@ -14,7 +16,7 @@ function CourseItem(props) {
     }
 
     return (
-        <div onMouseEnter={hover} onMouseLeave={outHover}>
+        <div className="CourseItem" onMouseEnter={hover} onMouseLeave={outHover}>
             <img src={courselogo} alt='Course Image'></img>
             <p>Course Name: {props.name}</p>
             <p>Instructor: {props.instructor}</p>

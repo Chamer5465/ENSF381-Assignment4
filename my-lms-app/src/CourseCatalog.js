@@ -9,6 +9,7 @@ function CourseCatalog() {
     );
     return (
         <div>
+            <h2>Coure Catalog</h2>
             {courseItem}
         </div>
     );

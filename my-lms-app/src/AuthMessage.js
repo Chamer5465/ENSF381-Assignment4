@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from './LoginForm.js';
+import DisplayStatus from './DisplayStatus';
 
 function AuthMessage() {
+    const { message, messageType } = useContext(AuthContext);
     return (
-        <div>
-
-        </div>
+        <DisplayStatus type={messageType} message={message} />
     );
 }
 

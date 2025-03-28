@@ -9,8 +9,16 @@ function EnrolledCourse(props) {
     const { enrolledCourse, setEnrolledCourses } = useContext(enrolledContext);
 
     function handleDrop() {
-        const newList = enrolledCourse.filter(c => c.name !== props.course.name);
-        setEnrolledCourses(newList);
+        const copy = [...enrolledCourse]; 
+      
+        for (let i = 0; i < copy.length; i++) {
+          if (copy[i].name === props.course.name) {
+            copy.splice(i, 1); 
+            break; 
+          }
+        }
+      
+        setEnrolledCourses(copy);
       }
 
     return (

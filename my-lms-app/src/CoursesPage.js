@@ -9,10 +9,7 @@ import EnrollmentList from './EnrollmentList';
 export const enrolledContext = createContext();
 
 function CoursesPage() {
-    const [enrolledCourse, setEnrolledCourses] = useState(() => {
-        const stored = localStorage.getItem('enrolledCourses');
-        return stored ? JSON.parse(stored) : [];
-      });
+    const [enrolledCourse, setEnrolledCourses] = useState([])
 
     useEffect(() => {
         const stored = localStorage.getItem('enrolledCourses');

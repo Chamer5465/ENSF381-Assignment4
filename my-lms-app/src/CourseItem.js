@@ -1,10 +1,11 @@
-import {React, useState} from 'react';
-import courselogo from './images/course1.jpg';
+import {React, useState, useContext} from 'react';
+import courselogo from './images/course2.jpg';
 import Courses from './data/courses';
-
+import { enrolledContext } from './CoursesPage';
 import './CourseItem.css'
 
 function CourseItem(props) {
+    const { enrolledCourse, setEnrolledCourses } = useContext(enrolledContext);
     const [showDescription, setShowDescription] = useState(false);
 
     function hover(){
@@ -15,9 +16,23 @@ function CourseItem(props) {
         setShowDescription(false);
     }
 
-    function addClass(){
-        
-    }
+    function addClass() {
+        let duplicate = false;
+      
+        for (let i = 0; i < enrolledCourse.length; i++) {
+          if (enrolledCourse[i].id === props.id) {
+            duplicate = true;
+            break;
+          }
+        }
+      
+        if (!duplicate) {
+          setEnrolledCourses([...enrolledCourse, props]);
+        } else {
+          alert("You're already enrolled in this course!");
+        }
+      }
+      
 
     return (
         <div className="CourseItem" onMouseEnter={hover} onMouseLeave={outHover}>
@@ -25,7 +40,7 @@ function CourseItem(props) {
             <p>Course Name: {props.name}</p>
             <p>Instructor: {props.instructor}</p>
             {showDescription && <p>Description: {props.description}</p>}
-            <button>Enroll Now</button>
+            <button onClick={addClass}>Enroll Now</button>
         </div>
     );
 }

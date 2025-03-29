@@ -1,5 +1,4 @@
 import React from 'react';
-import courses from './data/courses';
 import courselogo from './images/course1.jpg';
 import { useContext } from 'react';
 import { enrolledContext } from './CoursesPage';
@@ -22,8 +21,8 @@ function EnrolledCourse(props) {
       }
 
     return (
-        <div className='CourseItem'>
-            <img src={courselogo}></img>
+        <div className='EnrolledCourse'>
+            <img src={courselogo} alt="Course Logo"/>
             <p>Course Name: {props.name}</p>
             <p>Credit Hours: 3</p>
             <button onClick={handleDrop}>Drop Course</button>

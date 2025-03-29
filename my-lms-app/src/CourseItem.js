@@ -36,7 +36,7 @@ function CourseItem(props) {
 
     return (
         <div className="CourseItem" onMouseEnter={hover} onMouseLeave={outHover}>
-            <img src={courselogo} alt='Course Image'></img>
+            <img src={courselogo} alt='Course Image'/>
             <p>Course Name: {props.name}</p>
             <p>Instructor: {props.instructor}</p>
             {showDescription && <p>Description: {props.description}</p>}

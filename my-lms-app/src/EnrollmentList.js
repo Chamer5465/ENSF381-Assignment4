@@ -13,9 +13,8 @@ function EnrollmentList() {
             <div className='EnrollmentList'>
                 {enrolledCourse.map((course, index) => (
                 <EnrolledCourse name={course.name} course={course} />))}
-                <p>Total Credit Hours: {totalCredits}</p>
-
             </div>
+            <p>Total Credit Hours: {totalCredits}</p>
         </div>
     );
 }

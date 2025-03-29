@@ -55,7 +55,7 @@
     margin-bottom: 20px;
 }
 
-#password, #username, #email, #confirm-password{
+#password, #username {
     background-color: lightyellow;
     padding: 10px;
     border-radius: 5px;

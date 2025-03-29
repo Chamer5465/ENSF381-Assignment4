@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { useContext , useState, useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import AuthMessage from './AuthMessage';
 
 import './LoginForm.css';
@@ -83,7 +83,7 @@ function LoginForm() {
                     </div>
                     <div className='forgot-password-container'>
                         <br></br>
-                        <a href='' id='forgot-password'>Forgot Password:</a>
+                        <a href='' id='forgot-password'>Forgot Password</a>
                     </div>
                 </form>
                 <AuthMessage/>

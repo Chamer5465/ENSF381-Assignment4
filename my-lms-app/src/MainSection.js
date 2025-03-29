@@ -5,14 +5,19 @@ import Testimonials from './data/testimonials';
 import './MainSection.css';
 
 function MainSection() {
-    const course1 = Courses[Math.floor(Math.random() * Courses.length)]; //Idk whether they want like the same 3 random courses on each reload or a random 3 on each reload
-    const course2 = Courses[Math.floor(Math.random() * Courses.length)]; // Cause if its a different 3 on each reload why wouldnt we just do this for the testimonials as well
-    const course3 = Courses[Math.floor(Math.random() * Courses.length)]; // cause the only time it renders is when the page loads??? Hmmmmmmmmmmmmm????????
+    const course1 = Courses[4]; 
+    const course2 = Courses[2];
+    const course3 = Courses[5]; 
     const [testimonial1, setTestimonial1] = useState(Testimonials[0]);
     const [testimonial2, setTestimonial2] = useState(Testimonials[0]);
     useEffect(() => {
-        const T1 = Testimonials[Math.floor(Math.random() * Testimonials.length)];
-        const T2 = Testimonials[Math.floor(Math.random() * Testimonials.length)];
+        let num1 = Math.floor(Math.random() * Testimonials.length)
+        const T1 = Testimonials[num1];
+        let num2 = Math.floor(Math.random() * Testimonials.length)
+        while (num1 === num2) {
+            num2 = Math.floor(Math.random() * Testimonials.length)
+        }
+        const T2 = Testimonials[num2];
         setTestimonial1(T1);
         setTestimonial2(T2);
     }, []);
